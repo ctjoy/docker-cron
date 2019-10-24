@@ -1,0 +1,17 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: k8s-cronjob-example
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: k8s-cronjob-example
+            image: ctjoy/k8s_cron:latest
+            env:
+            - name: env_var
+              value: "this_is_a_var"
+          restartPolicy: OnFailure
