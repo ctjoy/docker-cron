@@ -1,2 +1,2 @@
 # docker-cron
-A example for how to use cron in docker
+A example of how to use cron in docker
