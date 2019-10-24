@@ -29,7 +29,7 @@ kubectl get cronjob k8s-cronjob-example
 kubectl get jobs --watch
 
 # view logs
-# Replace "k8s-cronjob-example-1571895240" with the job name in your system
+# replace "k8s-cronjob-example-1571895240" with the job name in your system
 pods=$(kubectl get pods --selector=job-name=k8s-cronjob-example-1571895240 --output=jsonpath={.items[*].metadata.name})
 kubectl logs $pods
 
@@ -39,3 +39,11 @@ kubectl delete cronjob k8s-cronjob-example
 # stop minikube
 minikube stop
 ```
+
+## Reference
+* https://stackoverflow.com/questions/37458287/how-to-run-a-cron-job-inside-a-docker-container
+* https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/
+* https://blog.techbridge.cc/2019/06/29/how-to-build-kubernetes-k8s-cronjob-crawler/
+
+Useful tool for cronjob
+* https://crontab.guru/
