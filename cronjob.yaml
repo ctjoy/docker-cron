@@ -6,6 +6,7 @@ spec:
   schedule: "*/1 * * * *"
   jobTemplate:
     spec:
+      backoffLimit: 2
       template:
         spec:
           containers:
@@ -14,4 +15,8 @@ spec:
             env:
             - name: env_var
               value: "this_is_a_var"
-          restartPolicy: OnFailure
+            args:
+              - /bin/sh
+              - -c
+              - date; echo Hello from the Kubernetes cluster ; python3 /app/main.py
+          restartPolicy: Never

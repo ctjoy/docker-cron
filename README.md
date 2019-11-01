@@ -43,7 +43,10 @@ minikube stop
 ## Reference
 * https://stackoverflow.com/questions/37458287/how-to-run-a-cron-job-inside-a-docker-container
 * https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/
+* https://nickjanetakis.com/blog/docker-tip-40-running-cron-jobs-on-the-host-vs-in-a-container
 * https://blog.techbridge.cc/2019/06/29/how-to-build-kubernetes-k8s-cronjob-crawler/
+* https://ithelp.ithome.com.tw/articles/10207533
+* https://www.awaimai.com/2615.html
 
 Useful tool for cronjob
 * https://crontab.guru/
